@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>เข้าสู่ระบบ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            max-width: 400px;
+            margin: auto;
+        }
+        h1 {
+            text-align: center;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            margin: 10px 0;
+        }
+        input[type="submit"]:hover {
+            background-color: #00aeff;
+        }
+        .create-account {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>เข้าสู่ระบบ</h1>
+    <form action="{{ url_for('login') }}" method="POST">
+        <label for="username">ชื่อผู้ใช้:</label>
+        <input type="text" id="username" name="username" required>
+        
+        <input type="submit" value="เข้าสู่ระบบ">
+    </form>
+
+    <li class="nav-item">
+        <a class="##" href="{{ url_for('create_account') }}">สร้างบัญชี</a>
+    </li>
+</body>
+</html>
